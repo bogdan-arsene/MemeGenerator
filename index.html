@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Meme Generator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy&display=swap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1> Meme Generator </h1>
+        <div class='bg'></div>
+        <p>
+            <textarea id="top-text"></textarea>
+            Modify text size: <input type="range" id="top-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+        </p>
+        <p>
+            <textarea id="bottom-text"></textarea>
+            Modify text size: <input type="range" id="bottom-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+        </p>
+        <p>
+            Choose font color:<input name="ColorPicker" type="color" value="#ffffff" id="ColorPicker" />
+        </p>
+        <p>
+            Choose font style:
+            <select id="select-font">
+                <option value="Arial">Arial</option>
+                <option value="Sans Serif">Sans Serif</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Verdana" >Verdana</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="Impact" >Impact</option>
+                <option value="Bookman">Bookman</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+            
+        </p>
+        <p>
+            <input type="file" id="image-input" accept="image/*">
+        </p>
+        <p>
+            <button class="generate" id="generate-btn">Generate</button>
+        </p>
+        <p>
+            <canvas id="meme-canvas" title="Right click -> &quot;Save image as...&quot;"></canvas>
+        </p>
+
+        <div id="download-btn" class="container" style="display: none;">
+            <div class="button">
+              <div class="icon">
+                <i class="fa fa-floppy-o"></i>
+              </div>
+            </div>
+            <p>Download Meme</p>
+        </div>
+
+        <p>*Tip : Click 'Generate' twice when uploading a new image</p>
+      
+        <script src="meme-generator.js"></script>
+        
+    </body>
+</html>
